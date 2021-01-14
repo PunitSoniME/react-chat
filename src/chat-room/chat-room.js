@@ -71,18 +71,17 @@ export default function ChatRoom({ socket, onLogout }) {
                         chats.map((chat) => {
                             if (chat.username) {
                                 if (username == chat.username) {
-                                    return <div className="message text-right" key={Math.random()}>
-                                        {chat.message}
+                                    return <div className="message my-message text-right" key={Math.random()}>
+                                        <span>{chat.message}</span>
                                     </div>
                                 }
                                 else {
-                                    return <div className="message" key={Math.random()}>
-                                        <b>{chat.username}</b>: {chat.message}
+                                    return <div className="message others-message" key={Math.random()}>
+                                        <span><b className="text-black">{chat.username}:</b> {chat.message}</span>
                                     </div>
                                 }
                             }
                             else {
-
                                 let msgClass = chat.type == "new-user" ? "text-success" : "text-danger";
                                 msgClass = `message text-center ${msgClass}`;
 
@@ -99,9 +98,9 @@ export default function ChatRoom({ socket, onLogout }) {
             <div className="send-message">
                 <label className="username-label">{username}</label>
                 <input type="text" ref={msgRef} className="input-message" value={message} placeholder="Enter Message" onChange={(ev) => setMessage(ev.target.value)} />
-                <button type="button" onClick={sendMessage}
+                <button type="button" className="button send-button" onClick={sendMessage}
                     disabled={message && message.trim() != '' ? '' : 'disabled'}>Send</button>
-                <button type="button" className="danger" onClick={logout}>Logout</button>
+                <button type="button" className="button danger" onClick={logout}>Logout</button>
             </div>
 
         </div>
