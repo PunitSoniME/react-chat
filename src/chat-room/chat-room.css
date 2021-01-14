@@ -1,0 +1,79 @@
+.chatroom {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    padding: 0px 200px;
+}
+
+.chatroom .send-message {
+    display: flex;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.chatroom .send-message .username-label {
+    background: teal;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border: 1px solid teal;
+    color: white;
+}
+
+.chatroom .send-message .input-message {
+    outline: none;
+    border: 1px solid lightgray;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.chatroom .send-message button {
+    padding: 0px 20px;
+    outline: none;
+    border: 1px solid lightgray;
+}
+
+.chatroom .send-message button.danger {
+    border: 1px solid #d9534f;
+    background-color: #d9534f;
+    color: white;
+}
+
+.chatroom .send-message button.danger:hover {
+    background-color: #e75954;
+    cursor: pointer;
+}
+
+.chatroom .send-message button:hover {
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+}
+
+.chatroom .send-message button:disabled:hover {
+    cursor: not-allowed;
+}
+
+.chatroom .chatting {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.chatroom .chatting .message {
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+@media (max-width: 991px) {
+    .chatroom {
+        padding: 0px 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chatroom {
+        padding: 0px 0px;
+    }
+}

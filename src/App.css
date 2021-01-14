@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.register {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+.register .user-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+.register .user-control .input-control {
+  padding: 15px;
+  outline: none;
+  border: 1px solid lightgray;
+  font-size: 1.2rem;
+}
+
+.register .user-control .add-user {
+  outline: none;
+  border: 1px solid #0275d8;
+  background: #0275d8;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.register .user-control .add-user:hover {
+  border: 1px solid #0275d8;
+  background: #027ce7;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-success {
+  color: #5cb85c;
+}
+
+.text-danger {
+  color: #d9534f;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
