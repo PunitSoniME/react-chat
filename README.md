@@ -8,4 +8,7 @@
 
 # To get the api to use this chat application, go to https://github.com/PunitSoniME/react-chat-api/
 
+# Sample
+![Output sample](https://raw.githubusercontent.com/PunitSoniME/react-chat-app/main/videos/react-chat.gif)
+
 # Enjoy
